@@ -1,6 +1,6 @@
 from sqlalchemy.orm import sessionmaker
 from sqlalchemy import create_engine
-from models import Base, Material, Process
+from models import Base, Material, Process, MaterialType, ProcessType, GridMix
 
 # Database connection
 DATABASE_URL = 'postgresql://postgres:postgres@localhost/thermoplastic_lca'
@@ -22,7 +22,14 @@ def seed_data():
     processes = [
         Process(name='Injection Molding for PP', type=ProcessType.injection_molding, energy_consumption=0.5, emissions_factor=0.2)
     ]
+    # Grid mix data
+    grid_mixes = [
+        GridMix(name='DE grid mix', emissions_factor=0.161, country_code='DE'),
+        GridMix(name='NL grid mix', emissions_factor=1.28, country_code='NL')
+    ]
+
     session.add_all(materials)
     session.add_all(processes)
+    session.add_all(grid_mixes)
     session.commit()
     session.close()

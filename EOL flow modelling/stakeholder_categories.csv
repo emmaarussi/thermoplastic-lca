@@ -1,0 +1,13 @@
+Category Group,Category Name,Description
+Supplier,Airline (EoL Supplier),Fleet operators discarding TPCs
+Supplier,Aircraft Manufacturer,Companies that produce aircraft using TPCs
+Supplier,MRO Facility,"Maintenance, Repair, and Overhaul facilities"
+Supplier,Airport Waste/Logistics,Airport services managing TPC waste
+Logistics & Processing,Recycler,Companies recycling thermoplastic composites
+Logistics & Processing,Transport Company,Companies transporting composite waste
+Logistics & Processing,Regulator,Bodies overseeing aviation/environmental compliance
+End Use,End User - Construction,Users of recycled TPCs in infrastructure/building
+End Use,End User - Consumer Goods,"Users in furniture, appliances, etc."
+End Use,End User - Electronics,Casings or components for electronics
+End Use,End User - Sports/Leisure,"Users in equipment like bikes, boards, helmets"
+Other,Other,Catch-all for unique or emerging roles

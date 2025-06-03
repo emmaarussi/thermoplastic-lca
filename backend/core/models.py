@@ -35,3 +35,10 @@ class Process(Base):
     type = Column(Enum(ProcessType), nullable=False)
     energy_consumption = Column(Float)  # kWh/kg
     emissions_factor = Column(Float)  # kg CO2e/kg
+
+class GridMix(Base):
+    __tablename__ = "grid_mix"
+    id = Column(Integer, primary_key=True)
+    name = Column(String, nullable=False)
+    emissions_factor = Column(Float)  # kg CO2e/kWh
+    country_code = Column(String(2))  # Two-letter country code
